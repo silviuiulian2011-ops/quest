@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRIVATE NETWORK</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="mobileBlock">
+  <div class="mobile-box">
+    <h1>ACCES RESTRICȚIONAT</h1>
+    <p>Această interfață poate fi accesată doar de pe PC.</p>
+  </div>
+</div>
+
+<div id="mainSite">
+
+  <div id="loginScreen" class="screen">
+    <div class="login-box">
+      <h1>WELCOME</h1>
+      <input type="text" id="username" placeholder="UTILIZATOR">
+      <input type="password" id="password" placeholder="PAROLĂ">
+      <button onclick="login()">LOGIN</button>
+      <p id="errorText"></p>
+    </div>
+  </div>
+
+  <div id="introScreen" class="screen hidden">
+    <div class="story-box">
+      <h1>ACCES CONFIRMAT</h1>
+      <div id="introText" class="typing-text"></div>
+      <button id="introNextButton" onclick="goToDesktop()">NEXT</button>
+    </div>
+  </div>
+
+  <div id="desktopScreen" class="screen hidden">
+    <div class="desktop">
+      <div class="icon" onclick="openHackSystem()">
+        <img src="https://cdn-icons-png.flaticon.com/512/1005/1005141.png">
+        <span>CrackTheCode.exe</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="gameScreen" class="screen hidden">
+    <h1>CRACK THE CODE</h1>
+
+    <div id="instructionsPanel">
+      <h2>INSTRUCȚIUNI</h2>
+      <p>Literele se schimbă automat în fiecare coloană.</p>
+      <p>Apasă <span>SPACE</span> doar când litera corectă apare cu <span style="color:red;">roșu.</span></p>
+      <p>Dacă greșești, sistemul te întoarce cu o coloană înapoi.</p>
+      <button onclick="beginCrackGame()">START</button>
+    </div>
+
+    <div id="columnsContainer" class="hidden"></div>
+    <div id="resultWord"></div>
+    <button id="nextButton" onclick="showFinalStory()">NEXT</button>
+  </div>
+
+  <div id="finalStoryScreen" class="screen hidden">
+    <div class="story-box">
+      <h1>VERIFICARE COMPLETĂ</h1>
+      <div id="finalStoryText" class="typing-text"></div>
+      <button id="finalNextButton" onclick="showFinalCode()">AFIȘEAZĂ CODUL</button>
+    </div>
+  </div>
+
+  <div id="finalScreen" class="screen hidden">
+    <h1>COD VALIDAT</h1>
+    <div id="finalCode"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
